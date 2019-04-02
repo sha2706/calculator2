@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Simple Calculator</title>
+
+	<meta name="viewport" content="width=device-width",initial-scale=1>
+
+	<script  src="jquery.js"></script>
+	<script  src="jquery.mobile-1.4.5.js"></script>
+	<link rel="stylesheet"  href="jquery.mobile-1.4.5.css">
+</head>
+
+<body>
+	<div data-role="page" id="pageone" data-theme="a">
+
+		<div data-role="header">
+			<h1>Simple Calculator</h1>
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pageone" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+					<li><a href="#pagetwo" class="ui-btn ui-icon-grid ui-btn-icon-top">Calculator</a></li>
+					<li><a href="#pagethree" class="ui-btn ui-icon-info ui-btn-icon-top">Help</a></li>
+			</div>
+
+		</div>
+
+		<div role="main" class="ui-content">
+			<p>This is a jQuery mobile exercise which provides the user with a calculator for basic mathematical operations</p>
+		</div>
+
+		<div data-role="footer">
+			<h1>Homework</h1>
+		</div>
+
+
+	</div>
+
+
+<!--page two-->
+	<div data-role="page" id="pagetwo" data-theme="a">
+
+		<div data-role="header">
+			<h1>Simple Calculator</h1>
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pageone" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+					<li><a href="#pagetwo" class="ui-btn ui-icon-grid ui-btn-icon-top">Calculator</a></li>
+					<li><a href="#pagethree" class="ui-btn ui-icon-info ui-btn-icon-top">Help</a></li>
+			</div>
+
+		<div data-role="main" class="ui-content">
+			<input type="number" id="num1" name="num1">
+		
+			<select class="" id="opr">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
+
+			<input type="number" id="num2" name="num2">
+
+			<input type="button" id="sum" value="Calculate"></input>
+			<input id="tst"></input>
+		</div>
+
+
+		<div data-role="footer">
+			<h1>Homework</h1>
+		</div>
+		</div>
+
+
+
+
+
+
+	</div>
+
+	<!--page three-->
+
+	<div data-role="page" id="pagethree" data-theme="a">
+
+		<div data-role="header">
+			<h1>Simple Calculator</h1>
+
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pageone" class="ui-btn ui-icon-home ui-btn-icon-top">Home</a></li>
+					<li><a href="#pagetwo" class="ui-btn ui-icon-grid ui-btn-icon-top">Calculator</a></li>
+					<li><a href="#pagethree" class="ui-btn ui-icon-info ui-btn-icon-top">Help</a></li>
+			</div>
+
+		</div>
+
+		<div role="main" class="ui-content">
+			<p>This is the help section and provides basic information about how to use the calculator</p>
+
+			<a class="ui-btn ui-icon-info ui-btn-icon-left" href="#help" >More Info</a>
+		</div>
+
+		<div data-role="footer">
+			<h1>Homework</h1>
+		</div>
+
+
+	</div>
+
+
+	<div data-role="page" data-dialog="true" id="help" data-theme="a">
+
+		<div data-role="header">
+			<h1>More Info</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<p>You have requested more information about the app!</p>
+			<a href="#pagethree" class="ui-btn ui-icon-arrowreturnthick-1-w ui-btn-icon-left">Dismiss</a>
+			
+		</div>
+
+		<div data-role="footer">
+			<h1>Homework</h1>
+		</div>
+
+
+	</div>
+
+
+</body>
+
+<script>
+	$(document).ready(function(){
+
+		$("#sum").click(function(){
+			
+			var opr = $("#opr").val();
+
+			
+				if (opr == "+"){
+				var a = $("#num1").val();
+			var b = $("#num2").val();
+				
+				var r = parseInt(a) + parseInt(b);
+				$("#tst").val(r);
+			} else if (opr == "-"){
+				var a = $("#num1").val();
+			var b = $("#num2").val();
+			
+
+				var r = parseInt(a) - parseInt(b);
+				$("#tst").val(r);
+			} else if (opr == "*"){
+				var a = $("#num1").val();
+			var b = $("#num2").val();
+			
+
+				var r = parseInt(a) * parseInt(b);
+				$("#tst").val(r);
+			} else if (opr == "/"){
+				var a = $("#num1").val();
+			var b = $("#num2").val();
+			
+
+				var r = parseInt(a) / parseInt(b);
+				$("#tst").val(r);
+			}
+			
+
+			
+			
+		});
+
+		
+		
+		
+	});
+
+</script>
+
+
+</html>
